@@ -16,4 +16,5 @@ if __name__ == '__main__':
 print("How are you doing")
 print("where do you live?")
 
+from secret import password
 
