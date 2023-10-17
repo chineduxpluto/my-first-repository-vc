@@ -13,12 +13,15 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
 
+def my_function(a, b):
+    return a + b
+
 print("How are you doing")
 print("where do you live?")
 from secret import password
 print(password)
 
-
+print(my_function(2,4))
 
 from secret import password
 
