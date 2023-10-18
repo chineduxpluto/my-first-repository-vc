@@ -22,6 +22,7 @@ from secret import password
 print(password)
 
 print(my_function(2,4))
+x = 3
 
 from secret import password
 
