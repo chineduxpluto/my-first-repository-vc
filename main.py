@@ -14,7 +14,7 @@ if __name__ == '__main__':
     print_hi('PyCharm')
 
 def my_function(a, b):
-    return a + b
+    return a - b
 
 print("How are you doing")
 print("where do you live?")
