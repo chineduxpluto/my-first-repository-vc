@@ -1,10 +1,13 @@
 import re
-# Define the list of stop words
-stop_words = set([
+
+# Define the set of stop words using a set literal
+stop_words = {
     'a', 'i', 'it', 'am', 'at', 'on', 'in', 'of', 'to', 'is', 'so', 'too',
     'my', 'the', 'and', 'but', 'are', 'very', 'here', 'even', 'from', 'them',
     'then', 'than', 'this', 'that', 'though'
-])
+}
+
+
 # Function to stem a word
 def stem(word):
     # Common endings to look for in stemming
@@ -14,8 +17,11 @@ def stem(word):
         if word.endswith(ending):
             return word[:-len(ending)]
     return word
+
+
 # Initialize an empty dictionary to store the index
 index = {}
+
 # Read input lines
 line_number = 1
 while True:
@@ -26,7 +32,7 @@ while True:
         break
 
     # Remove punctuation and convert to lowercase
-    line = re.sub(r'[.,:;!&\'\?]', '', line.lower())
+    line = re.sub(r'[.,:;!&\']', '', line.lower())
 
     # Split the line into words
     words = line.split()
@@ -44,6 +50,7 @@ while True:
                 index[word].append(line_number)
 
     line_number += 1
+
 # Print the index
 for word, line_numbers in index.items():
     print(f"{word}: {', '.join(map(str, line_numbers))}")
